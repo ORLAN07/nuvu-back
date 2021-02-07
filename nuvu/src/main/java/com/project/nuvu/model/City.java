@@ -15,10 +15,8 @@ import javax.persistence.*;
 public class City {
 
     @Id
-    @Column(name = "idCity")
+    @Column(name = "id_city")
     private Integer idCity;
-
-    //@Column(name = "country_code")
 
     @ManyToOne
     @JoinColumn(name = "country_code")

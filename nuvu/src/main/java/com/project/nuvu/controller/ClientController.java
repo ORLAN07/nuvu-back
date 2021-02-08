@@ -5,6 +5,8 @@ import com.project.nuvu.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(path = "/client")
 public class ClientController {
@@ -25,6 +27,11 @@ public class ClientController {
     @RequestMapping(method = RequestMethod.GET, value = "/{id-client}")
     public Client get(@PathVariable("id-client") Integer idClient) {
         return clientService.getClientById(idClient);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/getAll")
+    public List<Client> getAll() {
+        return clientService.listAllClient();
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/{id-client}")

@@ -76,6 +76,13 @@
 			<artifactId>spring-security-config</artifactId>
 			<version>5.3.4.RELEASE</version>
 		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>${gson.version}</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>

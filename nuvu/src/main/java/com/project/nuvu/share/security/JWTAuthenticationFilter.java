@@ -1,6 +1,8 @@
 package com.project.nuvu.share.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
+import com.project.nuvu.model.ObjectUserSecurity;
 import com.project.nuvu.model.User;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -13,6 +15,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -23,6 +26,7 @@ import static com.auth0.jwt.algorithms.Algorithm.HMAC512;
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter{
 
     private AuthenticationManager authenticationManager;
+    private Gson gson = new Gson();
 
 
     public JWTAuthenticationFilter(AuthenticationManager authenticationManager) {
@@ -59,5 +63,15 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
                 .withExpiresAt(new Date(System.currentTimeMillis() + SecurityConstants.EXPIRATION_TIME))
                 .sign(HMAC512(SecurityConstants.SECRET.getBytes()));
         res.addHeader(SecurityConstants.HEADER_STRING, SecurityConstants.TOKEN_PREFIX + token);
+        ObjectUserSecurity objectUserSecurity = new ObjectUserSecurity();
+        objectUserSecurity.setToken(SecurityConstants.TOKEN_PREFIX + token);
+        objectUserSecurity.setUsername(((org.springframework.security.core.userdetails.User) auth.getPrincipal()).getUsername());
+        res.setStatus(HttpServletResponse.SC_ACCEPTED);
+        String objectUserJsonString = this.gson.toJson(objectUserSecurity);
+        PrintWriter out = res.getWriter();
+        res.setContentType("application/json");
+        res.setCharacterEncoding("UTF-8");
+        out.print(objectUserJsonString);
+        out.flush();
     }
 }

@@ -1,5 +1,6 @@
 package com.project.nuvu.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -8,6 +9,7 @@ import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -19,6 +21,7 @@ public class Client {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_client")
     private Integer idClient;
     private String name1;
     private String name2;
@@ -27,10 +30,12 @@ public class Client {
     private Integer year;
     private String phone;
     private String email;
+
     @OneToOne
+    @JoinColumn(name = "id_city")
     private City city;
-    @NotFound(action = NotFoundAction.IGNORE)
-    @OneToMany(fetch = FetchType.LAZY)
-    private Set<Card> cards;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    private Set<Card> cards = new HashSet<>();
 
 }

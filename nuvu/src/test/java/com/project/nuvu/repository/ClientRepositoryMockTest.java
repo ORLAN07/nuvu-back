@@ -40,7 +40,7 @@ public class ClientRepositoryMockTest {
 
         Card card = new Card().builder()
                 .idCard(1)
-                .cardBrand(cardBrand)
+                .brand(cardBrand)
                 .isCredit(true)
                 .cardLevel(cardLevel)
                 .securityCode("098")
@@ -93,7 +93,7 @@ public class ClientRepositoryMockTest {
 
         Card card = new Card().builder()
                 .idCard(1)
-                .cardBrand(cardBrand)
+                .brand(cardBrand)
                 .isCredit(true)
                 .cardLevel(cardLevel)
                 .securityCode("098")
@@ -146,7 +146,7 @@ public class ClientRepositoryMockTest {
 
         Card card = new Card().builder()
                 .idCard(1)
-                .cardBrand(cardBrand)
+                .brand(cardBrand)
                 .isCredit(true)
                 .cardLevel(cardLevel)
                 .securityCode("098")

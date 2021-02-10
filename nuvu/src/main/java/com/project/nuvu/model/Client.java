@@ -27,6 +27,8 @@ public class Client {
     private Integer year;
     private String phone;
     private String email;
+    @OneToOne
+    private City city;
     @NotFound(action = NotFoundAction.IGNORE)
     @OneToMany(fetch = FetchType.LAZY)
     private Set<Card> cards;

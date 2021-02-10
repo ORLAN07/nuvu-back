@@ -34,9 +34,13 @@ public class ClientRepositoryMockTest {
                 .type(1)
                 .description("Platino").build();
 
+        CardBrand cardBrand = new CardBrand().builder()
+                .idCardBrand(1)
+                .description("Mastercard").build();
+
         Card card = new Card().builder()
                 .idCard(1)
-                .brand("Master card")
+                .cardBrand(cardBrand)
                 .isCredit(true)
                 .cardLevel(cardLevel)
                 .securityCode("098")
@@ -83,9 +87,13 @@ public class ClientRepositoryMockTest {
                 .type(1)
                 .description("Platino").build();
 
+        CardBrand cardBrand = new CardBrand().builder()
+                .idCardBrand(1)
+                .description("Mastercard").build();
+
         Card card = new Card().builder()
                 .idCard(1)
-                .brand("Master card")
+                .cardBrand(cardBrand)
                 .isCredit(true)
                 .cardLevel(cardLevel)
                 .securityCode("098")
@@ -132,9 +140,13 @@ public class ClientRepositoryMockTest {
                 .type(1)
                 .description("Platino").build();
 
+        CardBrand cardBrand = new CardBrand().builder()
+                .idCardBrand(1)
+                .description("Mastercard").build();
+
         Card card = new Card().builder()
                 .idCard(1)
-                .brand("Master card")
+                .cardBrand(cardBrand)
                 .isCredit(true)
                 .cardLevel(cardLevel)
                 .securityCode("098")

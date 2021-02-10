@@ -19,7 +19,9 @@ public class Card {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_card")
     private Integer idCard;
-    private String brand;
+    @OneToOne
+    @JoinColumn(name = "card_brand")
+    private CardBrand cardBrand;
     @Column(name = "is_credit")
     private boolean isCredit;
     @Column(name = "date_due")

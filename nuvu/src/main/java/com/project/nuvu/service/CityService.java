@@ -9,5 +9,6 @@ import java.util.List;
 public interface CityService {
 
     public List<City> findAll();
+    public List<City> findByCountry(String codeCountry);
 
 }

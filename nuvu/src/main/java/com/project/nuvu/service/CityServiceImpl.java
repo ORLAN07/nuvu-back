@@ -17,4 +17,9 @@ public class CityServiceImpl implements CityService {
     public List<City> findAll() {
         return cityRepository.findAll();
     }
+
+    @Override
+    public List<City> findByCountry(String codeCountry) {
+        return cityRepository.findCitiesByCountry(codeCountry);
+    }
 }

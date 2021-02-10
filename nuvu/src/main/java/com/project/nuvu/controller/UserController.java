@@ -1,6 +1,7 @@
 package com.project.nuvu.controller;
 
 import com.project.nuvu.model.User;
+import com.project.nuvu.service.UserService;
 import com.project.nuvu.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @Autowired
-    private UserServiceImpl userServiceImpl;
+    private UserService userService;
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     public UserController(BCryptPasswordEncoder bCryptPasswordEncoder) {
@@ -22,8 +23,8 @@ public class UserController {
     }
 
     @RequestMapping(value = "/sign-up", method = RequestMethod.POST)
-    public void signUp(@RequestBody User user) {
+    public User signUp(@RequestBody User user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-        userServiceImpl.save(user);
+        return userService.save(user);
     }
 }

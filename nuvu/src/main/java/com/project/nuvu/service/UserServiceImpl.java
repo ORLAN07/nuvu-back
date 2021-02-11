@@ -19,7 +19,6 @@ public class UserServiceImpl implements UserService{
     @Override
     public User save(User user) {
         User userRes = userRepository.findByUserName(user.getUserName());
-        System.out.println("userName>>" + userRes);
         if (userRes == null) {
             return userRepository.save(user);
         }

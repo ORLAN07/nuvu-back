@@ -1,12 +1,9 @@
 package com.project.nuvu.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.NotFound;
-import org.hibernate.annotations.NotFoundAction;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -35,7 +32,7 @@ public class Client {
     @JoinColumn(name = "id_city")
     private City city;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = {CascadeType.ALL})
     private Set<Card> cards = new HashSet<>();
 
 }

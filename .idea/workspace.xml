@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="034dfc70-dfcb-4a85-b336-9fa1a9dc58dd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/nuvu/src/main/java/com/project/nuvu/controller/CardBrandController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nuvu/src/main/java/com/project/nuvu/model/CardBrand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nuvu/src/main/java/com/project/nuvu/repository/CardBrandRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nuvu/src/main/java/com/project/nuvu/service/CardBrandService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nuvu/src/main/java/com/project/nuvu/service/CardBrandServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuvu/src/main/java/com/project/nuvu/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/nuvu/src/main/java/com/project/nuvu/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuvu/src/main/java/com/project/nuvu/model/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/nuvu/src/main/java/com/project/nuvu/model/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuvu/src/main/java/com/project/nuvu/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/nuvu/src/main/java/com/project/nuvu/model/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuvu/src/main/java/com/project/nuvu/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/nuvu/src/main/java/com/project/nuvu/service/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuvu/src/test/java/com/project/nuvu/repository/ClientRepositoryMockTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/nuvu/src/test/java/com/project/nuvu/repository/ClientRepositoryMockTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuvu/src/test/java/com/project/nuvu/service/ClientServiceMockTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/nuvu/src/test/java/com/project/nuvu/service/ClientServiceMockTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +64,7 @@
       <workItem from="1612805464889" duration="192000" />
       <workItem from="1612805797958" duration="285000" />
       <workItem from="1612911647946" duration="48000" />
+      <workItem from="1613068123220" duration="55000" />
     </task>
     <servers />
   </component>
@@ -86,10 +80,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="705" y="318" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1612805547387" />
-    <state x="635" y="229" key="FileChooserDialogImpl" timestamp="1612911694507">
+    <state x="635" y="229" key="FileChooserDialogImpl" timestamp="1613068176111">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="635" y="229" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1612911694507" />
+    <state x="635" y="229" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1613068176111" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1612805924502">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

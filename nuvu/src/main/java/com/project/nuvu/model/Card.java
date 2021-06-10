@@ -1,12 +1,12 @@
 package com.project.nuvu.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
@@ -14,7 +14,8 @@ import java.util.Date;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Card {
+@Table
+public class Card implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
